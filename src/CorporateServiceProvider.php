@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FromHome\Corporate;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class CorporateServiceProvider extends PackageServiceProvider
+final class CorporateServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {

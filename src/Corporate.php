@@ -1,7 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FromHome\Corporate;
 
-class Corporate
+final class Corporate
 {
 }

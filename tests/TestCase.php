@@ -1,30 +1,25 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FromHome\Corporate\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 use FromHome\Corporate\CorporateServiceProvider;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-class TestCase extends Orchestra
+final class TestCase extends Orchestra
 {
     protected function setUp(): void
     {
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'FromHome\\Corporate\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'FromHome\\Corporate\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 
-    protected function getPackageProviders($app)
-    {
-        return [
-            CorporateServiceProvider::class,
-        ];
-    }
-
-    public function getEnvironmentSetUp($app)
+    public function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
 
@@ -32,5 +27,12 @@ class TestCase extends Orchestra
         $migration = include __DIR__.'/../database/migrations/create_laravel-corporate_table.php.stub';
         $migration->up();
         */
+    }
+
+    protected function getPackageProviders($app)
+    {
+        return [
+            CorporateServiceProvider::class,
+        ];
     }
 }
