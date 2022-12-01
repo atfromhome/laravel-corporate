@@ -1,9 +1,9 @@
 # Approval, employee and division in common corporate
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/fromhome/laravel-corporate.svg?style=flat-square)](https://packagist.org/packages/fromhome/laravel-corporate)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/fromhome/laravel-corporate/run-tests?label=tests)](https://github.com/fromhome/laravel-corporate/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/fromhome/laravel-corporate/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/fromhome/laravel-corporate/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/fromhome/laravel-corporate.svg?style=flat-square)](https://packagist.org/packages/fromhome/laravel-corporate)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/atfromhome/laravel-corporate.svg?style=flat-square)](https://packagist.org/packages/atfromhome/laravel-corporate)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/atfromhome/laravel-corporate/run-tests?label=tests)](https://github.com/atfromhome/laravel-corporate/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/atfromhome/laravel-corporate/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/atfromhome/laravel-corporate/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/atfromhome/laravel-corporate.svg?style=flat-square)](https://packagist.org/packages/atfromhome/laravel-corporate)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -68,7 +68,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Nuradiyana](https://github.com/atfromhome)
+- [Nuradiyana](https://github.com/nuradiyana)
 - [All Contributors](../../contributors)
 
 ## License
