@@ -1,11 +1,9 @@
-# Approval, employee and division in common corporate
+# Employee with division and position in common corporate
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/atfromhome/laravel-corporate.svg?style=flat-square)](https://packagist.org/packages/atfromhome/laravel-corporate)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/atfromhome/laravel-corporate/run-tests?label=tests)](https://github.com/atfromhome/laravel-corporate/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/atfromhome/laravel-corporate/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/atfromhome/laravel-corporate/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/atfromhome/laravel-corporate/run-tests?label=tests)](https://github.com/atfromhome/laravel-corporate/actions?query=workflow%3A%22Running+phpunit%22+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/atfromhome/laravel-corporate/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/atfromhome/laravel-corporate/actions?query=workflow%3A%22Running+ECS%22+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/atfromhome/laravel-corporate.svg?style=flat-square)](https://packagist.org/packages/atfromhome/laravel-corporate)
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
 ## Installation
 
@@ -26,26 +24,6 @@ You can publish the config file with:
 
 ```bash
 php artisan vendor:publish --tag="laravel-corporate-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-corporate-views"
-```
-
-## Usage
-
-```php
-$corporate = new FromHome\Corporate();
-echo $corporate->echoPhrase('Hello, FromHome!');
 ```
 
 ## Testing
