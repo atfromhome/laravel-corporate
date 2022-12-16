@@ -134,6 +134,21 @@ final class CorporateRegistrar
         return app(self::getEmployeeClass());
     }
 
+    public static function getBranchModel(): Branch
+    {
+        return app(self::getBranchClass());
+    }
+
+    public static function getDivisionModel(): Branch
+    {
+        return app(self::getDivisionClass());
+    }
+
+    public static function getPositionModel(): Branch
+    {
+        return app(self::getPositionClass());
+    }
+
     public static function routes(): void
     {
         Routes::route();
