@@ -17,6 +17,8 @@ final class Routes
     {
         self::employee();
         self::branch();
+        self::division();
+        self::position();
     }
 
     public static function employee(): void
