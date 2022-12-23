@@ -36,7 +36,7 @@ final class DivisionRepository implements Repository\DivisionRepository
     public function filter(Request $request): LengthAwarePaginator
     {
         return QueryBuilder::for($this->newEloquentQuery(), $request)->allowedFilters([
-            AllowedFilter::exact('name', 'name'),
+            AllowedFilter::partial('name', 'name'),
             AllowedFilter::exact('parent', 'parent_id'),
             AllowedFilter::custom('active', new ActiveFilter(), 'deactivated_at'),
         ])->allowedSorts([

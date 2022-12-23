@@ -43,7 +43,7 @@ final class EmployeeRepository implements Repository\EmployeeRepository
         ]);
 
         return QueryBuilder::for($builder, $request)->allowedFilters([
-            AllowedFilter::exact('name', 'name'),
+            AllowedFilter::partial('name', 'name'),
             AllowedFilter::exact('position', 'position_id'),
             AllowedFilter::exact('division', 'division'),
             AllowedFilter::exact('branch', 'branch_id'),
