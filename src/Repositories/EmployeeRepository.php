@@ -36,7 +36,14 @@ final class EmployeeRepository implements Repository\EmployeeRepository
 
     public function filter(Request $request): LengthAwarePaginator
     {
-        return QueryBuilder::for($this->newEloquentQuery(), $request)->allowedFilters([
+        $builder = $this->newEloquentQuery()->with([
+            'position' => fn (Relation $relation) => $relation->select(['id', 'uuid', 'name']),
+            'division' => fn (Relation $relation) => $relation->select(['id', 'uuid', 'name']),
+            'branch' => fn (Relation $relation) => $relation->select(['id', 'uuid', 'name']),
+        ]);
+
+        return QueryBuilder::for($builder, $request)->allowedFilters([
+            AllowedFilter::exact('name', 'name'),
             AllowedFilter::exact('position', 'position_id'),
             AllowedFilter::exact('division', 'division'),
             AllowedFilter::exact('branch', 'branch_id'),
@@ -48,10 +55,6 @@ final class EmployeeRepository implements Repository\EmployeeRepository
 
     private function newEloquentQuery(): Builder
     {
-        return CorporateRegistrar::getEmployeeModel()->newQuery()->with([
-            'position' => fn (Relation $relation) => $relation->select(['id', 'uuid', 'name']),
-            'division' => fn (Relation $relation) => $relation->select(['id', 'uuid', 'name']),
-            'branch' => fn (Relation $relation) => $relation->select(['id', 'uuid', 'name']),
-        ]);
+        return CorporateRegistrar::getEmployeeModel()->newQuery();
     }
 }
